@@ -93,7 +93,7 @@ val isReleaseBuild: Boolean
 
 object Library {
     const val libraryGroup = "com.github.submob"
-    const val libraryVersion = "1.0.0"
+    const val libraryVersion = "1.0.1"
 
     const val libraryUrl = "https://github.com/SubMob/ParserMob"
     const val libraryName = "ParserMob"
