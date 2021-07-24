@@ -48,7 +48,10 @@ class ParserMobTest {
     fun positiveDivisionByZero() = assertEquals(Double.POSITIVE_INFINITY, parser.calculate("9/0"))
 
     @Test
-    fun negativeDivisionByZero() = assertEquals(Double.NEGATIVE_INFINITY, parser.calculate("-9.0/0"))
+    fun negativeDivisionByZero() = assertEquals(
+        Double.NEGATIVE_INFINITY,
+        parser.calculate("-9.0/0")
+    )
 
     @Test
     fun checkIfFirstDigitAcceptable() {

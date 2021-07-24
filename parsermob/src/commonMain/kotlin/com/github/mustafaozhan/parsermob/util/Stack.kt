@@ -18,8 +18,6 @@ class Stack<T> {
 
     fun isEmpty() = _stack.isEmpty()
 
-    fun size() = top + 1
-
     fun clear() {
         _stack.clear()
         top = -1

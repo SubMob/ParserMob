@@ -4,4 +4,7 @@
 
 package com.github.mustafaozhan.parsermob.error
 
-class BadFormatException(msg: String = "Bad Format") : Exception(msg)
+class BadFormatException(
+    exception: Exception = Exception(),
+    msg: String = "Bad Format"
+) : Exception(msg, exception)
