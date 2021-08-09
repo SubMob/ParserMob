@@ -1,9 +1,9 @@
-name: master
+name: ParserMob CI
 
 on:
   push:
     branches:
-      - master
+      - develop
   pull_request:
 
 jobs:
