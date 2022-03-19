@@ -2,13 +2,13 @@
  * Copyright (c) 2021 Mustafa Ozhan. All rights reserved.
  */
 
-package com.github.mustafaozhan.parsermob
+package com.github.submob.parsermob
 
-import com.github.mustafaozhan.parsermob.error.BadFormatException
-import com.github.mustafaozhan.parsermob.model.Operators
-import com.github.mustafaozhan.parsermob.util.Stack
-import com.github.mustafaozhan.parsermob.util.isIn
-import com.github.mustafaozhan.parsermob.util.notIn
+import com.github.submob.parsermob.error.BadFormatException
+import com.github.submob.parsermob.model.Operators
+import com.github.submob.parsermob.util.Stack
+import com.github.submob.parsermob.util.isIn
+import com.github.submob.parsermob.util.notIn
 import kotlin.math.pow
 import kotlin.math.round
 

@@ -4,6 +4,7 @@
 
 package com.github.mustafaozhan.parsermob
 
+import com.github.submob.parsermob.ParserMob
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

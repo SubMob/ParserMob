@@ -2,7 +2,7 @@
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
 
-package com.github.mustafaozhan.parsermob.model
+package com.github.submob.parsermob.model
 
 @Suppress("MagicNumber")
 enum class Operators(val sign: String, val precedence: Int) {
