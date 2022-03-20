@@ -2,9 +2,8 @@
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
 
-package com.github.mustafaozhan.parsermob
+package com.github.submob.parsermob
 
-import com.github.submob.parsermob.ParserMob
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
