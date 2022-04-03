@@ -2,7 +2,7 @@
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
 
-package com.github.mustafaozhan.parsermob.util
+package com.github.submob.parsermob.util
 
 class Stack<T> {
     private val _stack = arrayListOf<T>()

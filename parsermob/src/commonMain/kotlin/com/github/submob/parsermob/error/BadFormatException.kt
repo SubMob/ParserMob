@@ -2,7 +2,7 @@
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
 
-package com.github.mustafaozhan.parsermob.error
+package com.github.submob.parsermob.error
 
 class BadFormatException(
     exception: Exception = Exception(),

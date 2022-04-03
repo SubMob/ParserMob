@@ -2,9 +2,9 @@
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
 
-package com.github.mustafaozhan.parsermob.util
+package com.github.submob.parsermob.util
 
-import com.github.mustafaozhan.parsermob.model.Operators
+import com.github.submob.parsermob.model.Operators
 
 @Suppress("ReturnCount")
 infix fun <T> String.isIn(operators: Array<T>): Boolean {
