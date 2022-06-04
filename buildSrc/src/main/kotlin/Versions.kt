@@ -4,4 +4,5 @@
 
 object Versions {
     const val KOTLIN = "1.6.21"
+    const val DEPENDENCY_UPDATES = "0.42.0"
 }
