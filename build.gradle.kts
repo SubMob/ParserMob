@@ -7,7 +7,10 @@ import java.util.Properties
 
 plugins {
     `maven-publish`
-    id(Dependencies.Plugins.DEPENDENCY_UPDATES) version Versions.DEPENDENCY_UPDATES
+    with(Dependencies.Plugins) {
+        id(DEPENDENCY_UPDATES) version Versions.DEPENDENCY_UPDATES
+        id(BUILD_HEALTH) version Versions.BUILD_HEALTH
+    }
 }
 
 buildscript {
