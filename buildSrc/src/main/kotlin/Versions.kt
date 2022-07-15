@@ -3,5 +3,7 @@
  */
 
 object Versions {
-    const val KOTLIN = "1.6.21"
+    const val KOTLIN = "1.7.10"
+    const val DEPENDENCY_UPDATES = "0.42.0"
+    const val BUILD_HEALTH = "1.10.0"
 }
