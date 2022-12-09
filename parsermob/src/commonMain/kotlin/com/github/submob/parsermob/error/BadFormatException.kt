@@ -5,6 +5,5 @@
 package com.github.submob.parsermob.error
 
 class BadFormatException(
-    exception: Exception = Exception(),
-    msg: String = "Bad Format"
-) : Exception(msg, exception)
+    exception: Exception = Exception("Bad Format"),
+) : Exception(exception.message, exception)
