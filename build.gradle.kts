@@ -7,7 +7,7 @@ import java.util.Properties
 
 plugins {
     `maven-publish`
-    id(Dependencies.Plugins.DEPENDENCY_UPDATES) version Versions.DEPENDENCY_UPDATES
+    alias(libs.plugins.dependencyUpdates)
 }
 
 buildscript {
@@ -16,7 +16,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath(Dependencies.ClassPaths.KOTLIN_GRADLE_PLUGIN)
+        classpath(libs.classpaths.kotlinGradlePlugin)
     }
 }
 

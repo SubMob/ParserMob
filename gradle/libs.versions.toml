@@ -1,0 +1,17 @@
+[versions]
+
+kotlin = "1.7.22"
+dependencyUpdates = "0.44.0"
+
+[libraries]
+# COMMON
+common-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+common-testAnnotations = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common", version.ref = "kotlin" }
+
+# CLASSPATHS
+classpaths-kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+[plugins]
+
+multiplatform = { id = "org.jetbrains.kotlin.multiplatform" }
+dependencyUpdates = { id = "com.github.ben-manes.versions", version.ref = "dependencyUpdates" }
