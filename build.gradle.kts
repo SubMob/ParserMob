@@ -23,7 +23,7 @@ buildscript {
 
 allprojects {
 
-    with(Library) {
+    Library.apply {
 
         group = GROUP
         version = ProjectSettings.getVersionName(project)
