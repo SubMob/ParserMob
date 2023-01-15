@@ -76,14 +76,14 @@ allprojects {
                 }
             }
 
-            extensions.findByType<SigningExtension>()?.apply {
-                val publishing = extensions.findByType<PublishingExtension>() ?: return@apply
+            extensions.findByType<PublishingExtension>()?.let { publishing ->
                 val key = getSecret("GPG_KEY").replace("\\n", "\n")
                 val password = getSecret("GPG_PASSWORD")
 
-                @Suppress("UnstableApiUsage")
-                useInMemoryPgpKeys(key, password)
-                sign(publishing.publications)
+                extensions.findByType<SigningExtension>()?.apply {
+                    useInMemoryPgpKeys(key, password)
+                    sign(publishing.publications)
+                }
             }
 
             tasks.withType<Sign>().configureEach {
