@@ -93,6 +93,24 @@ allprojects {
 val isReleaseBuild: Boolean
     get() = System.getenv("GPG_KEY") != null
 
+fun getSecret(
+    key: String,
+    default: String = "secret" // these values can not be public
+): String = System.getenv(key).let {
+    if (it.isNullOrEmpty()) {
+        getSecretProperties()?.get(key)?.toString() ?: default
+    } else {
+        it
+    }
+}
+
+fun getSecretProperties() = try {
+    Properties().apply { load(file("key.properties").inputStream()) }
+} catch (e: IOException) {
+    logger.debug(e.message, e)
+    null
+}
+
 object Library {
     const val GROUP = "com.github.submob"
     const val URL = "https://github.com/SubMob/ParserMob"
