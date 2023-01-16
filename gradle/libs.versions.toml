@@ -1,7 +1,6 @@
 [versions]
 
 kotlin = "1.7.22"
-dependencyUpdates = "0.44.0"
 
 [libraries]
 # COMMON
@@ -14,4 +13,3 @@ classpaths-kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-p
 [plugins]
 
 multiplatform = { id = "org.jetbrains.kotlin.multiplatform" }
-dependencyUpdates = { id = "com.github.ben-manes.versions", version.ref = "dependencyUpdates" }
