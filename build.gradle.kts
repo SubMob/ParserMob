@@ -1,6 +1,8 @@
 /*
  * Copyright (c) 2020 Mustafa Ozhan. All rights reserved.
  */
+import java.io.IOException
+import java.util.Properties
 
 plugins {
     `maven-publish`
