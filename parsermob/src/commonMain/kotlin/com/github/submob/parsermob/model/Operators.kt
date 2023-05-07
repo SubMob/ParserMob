@@ -10,5 +10,5 @@ enum class Operators(val sign: String, val precedence: Int) {
     MINUS("-", 2),
     MULTIPLY("*", 3),
     DIVISION("/", 4),
-    UNARY("u", 6);
+    UNARY("u", 6)
 }
