@@ -7,7 +7,6 @@ package com.github.submob.parsermob
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-@Suppress("TooManyFunctions")
 class ParserMobTest {
     private val parser = ParserMob()
 

@@ -6,7 +6,6 @@ package com.github.submob.parsermob.util
 
 import com.github.submob.parsermob.model.Operators
 
-@Suppress("ReturnCount")
 infix fun <T> String.isIn(operators: Array<T>): Boolean {
     for (operator in operators) {
         if (operator is Operators) {
