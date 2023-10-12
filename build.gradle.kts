@@ -7,6 +7,7 @@ import java.util.Properties
 
 plugins {
     `maven-publish`
+    alias(libs.plugins.kover)
 }
 
 buildscript {
@@ -15,11 +16,18 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath(libs.classpaths.kotlinGradlePlugin)
+        libs.classpaths.apply {
+            classpath(kotlinGradlePlugin)
+            classpath(kover)
+        }
     }
 }
 
 allprojects {
+
+    apply(plugin = rootProject.libs.plugins.kover.get().pluginId).also {
+        rootProject.dependencies.add("kover", project(path))
+    }
 
     Library.apply {
 
