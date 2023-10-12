@@ -5,11 +5,11 @@
 ![badge][badge-js]
 ![badge][badge-jvm]
 
-[![ScopeMob CI](https://github.com/SubMob/ScopeMob/actions/workflows/main.yml/badge.svg)](https://github.com/SubMob/ScopeMob/actions/workflows/main.yml)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.submob/scopemob/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.submob/scopemob)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/35c32a0221ab44e18400834c35b8f402)](https://www.codacy.com/gh/SubMob/ScopeMob?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SubMob/ScopeMob&amp;utm_campaign=Badge_Grade)
-[![Codacy Coverage](https://app.codacy.com/project/badge/Coverage/35c32a0221ab44e18400834c35b8f402)](https://www.codacy.com/gh/SubMob/ScopeMob/dashboard?utm_source=github.com&utm_medium=referral&utm_content=SubMob/ScopeMob&utm_campaign=Badge_Coverage)
-[![Codecov Badge](https://codecov.io/gh/SubMob/ScopeMob/branch/develop/graph/badge.svg?token=MPEA1FBVT3)](https://codecov.io/gh/SubMob/ScopeMob)
+[![ParserMob CI](https://github.com/SubMob/ParserMob/actions/workflows/main.yml/badge.svg)](https://github.com/SubMob/ParserMob/actions/workflows/main.yml)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.submob/parsermob/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.submob/parsermob)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/35c32a0221ab44e18400834c35b8f402)](https://www.codacy.com/gh/SubMob/ParserMob?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SubMob/ParserMob&amp;utm_campaign=Badge_Grade)
+[![Codacy Coverage](https://app.codacy.com/project/badge/Coverage/9a20b6c5bb574e6fa8b3c8fb8c729378)](https://app.codacy.com/gh/SubMob/ParserMob/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
+[![Codecov Badge](https://codecov.io/gh/SubMob/ParserMob/graph/badge.svg?token=8BXIYNG758)](https://codecov.io/gh/SubMob/ParserMob)
 
 ## Install
 
