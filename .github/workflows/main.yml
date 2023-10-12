@@ -1,4 +1,4 @@
-name: ScopeMob CI
+name: ParserMob CI
 
 on:
   push:
