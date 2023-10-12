@@ -11,6 +11,7 @@
 [![Codacy Coverage](https://app.codacy.com/project/badge/Coverage/9a20b6c5bb574e6fa8b3c8fb8c729378)](https://app.codacy.com/gh/SubMob/ParserMob/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 [![Codecov Badge](https://codecov.io/gh/SubMob/ParserMob/graph/badge.svg?token=8BXIYNG758)](https://codecov.io/gh/SubMob/ParserMob)
 
+#
 ## Install
 
 ParserMob is currently published to Maven Central, so add that to repositories.
