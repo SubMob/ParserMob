@@ -7,7 +7,7 @@ package com.github.submob.parsermob
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class ParserMobTest {
+internal class ParserMobTest {
     private val parser = ParserMob()
 
     @Test
