@@ -22,7 +22,7 @@ class ParserMob {
         expression: String,
         precision: Int = 3
     ) = try {
-        val uExpression = convertToUExpression(expression.replace("%", "/100*"))
+        val uExpression = convertToUExpression(expression.replace("%", "/100x"))
         val res = evaluateExpression(uExpression)
         roundToPrecision(res, precision)
     } catch (e: BadFormatException) {
@@ -41,7 +41,7 @@ class ParserMob {
                     sb.append('u')
                 } else {
                     val prevChar = expression[i - 1]
-                    if (prevChar in "+*/(") {
+                    if (prevChar in "+x/(") {
                         sb.append('u')
                     } else {
                         sb.append(currChar)
@@ -109,14 +109,14 @@ class ParserMob {
         while (i < expression.length) {
             val currChar = expression[i]
 
-            if (i == 0 && currChar in ")/%*") {
+            if (i == 0 && currChar in ")/%x") {
                 throw BadFormatException()
             }
 
             when {
                 currChar in "0123456789." -> {
                     if (i != 0 && (expression[i - 1] == ')')) {
-                        performSafePushToStack(numString, "*")
+                        performSafePushToStack(numString, "x")
                     }
                     numString.append(currChar)
                     i++
@@ -125,7 +125,7 @@ class ParserMob {
                     if (currChar == '(') {
                         // check for implicit multiply
                         if (i != 0 && expression[i - 1].toString() notIn Operators.values()) {
-                            performSafePushToStack(numString, "*")
+                            performSafePushToStack(numString, "x")
                         }
                         opStack.push("(")
                     } else {
@@ -143,7 +143,7 @@ class ParserMob {
                     if (i != 0 && expression[i - 1].toString() notIn Operators.values() &&
                         expression[i - 1] != '('
                     ) {
-                        performSafePushToStack(numString, "*")
+                        performSafePushToStack(numString, "x")
                     }
                     i++
                 }

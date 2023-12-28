@@ -14,10 +14,10 @@ internal class ParserMobTest {
     fun addition() = assertEquals(4.0, parser.calculate("1+3"))
 
     @Test
-    fun additionWithMultiply() = assertEquals(10.0, parser.calculate("1+3*3"))
+    fun additionWithMultiply() = assertEquals(10.0, parser.calculate("1+3x3"))
 
     @Test
-    fun additionWithMultiplyParenthesis() = assertEquals(12.0, parser.calculate("(1+3)*3"))
+    fun additionWithMultiplyParenthesis() = assertEquals(12.0, parser.calculate("(1+3)x3"))
 
     @Test
     fun percentage() = assertEquals(40.0, parser.calculate("200%20"))
@@ -32,7 +32,7 @@ internal class ParserMobTest {
     fun division() = assertEquals(4 / 5.0, parser.calculate("4/5"))
 
     @Test
-    fun multiply() = assertEquals(4 * 5.0, parser.calculate("4*5"))
+    fun multiply() = assertEquals(4 * 5.0, parser.calculate("4x5"))
 
     @Test
     fun multipleSubtraction() = assertEquals(-8.0, parser.calculate("10-9-9"))
@@ -57,7 +57,7 @@ internal class ParserMobTest {
         assertEquals(Double.NaN, parser.calculate(")"))
         assertEquals(Double.NaN, parser.calculate("/"))
         assertEquals(Double.NaN, parser.calculate("%"))
-        assertEquals(Double.NaN, parser.calculate("*"))
+        assertEquals(Double.NaN, parser.calculate("x"))
     }
 
     @Test
@@ -82,7 +82,7 @@ internal class ParserMobTest {
     fun random2() = assertEquals(5.121, parser.calculate("1.3x2.2+1.33x1.7"))
 
     @Test
-    fun random3() = assertEquals(386.0, parser.calculate("9/45x5*8+9x42"))
+    fun random3() = assertEquals(386.0, parser.calculate("9/45x5x8+9x42"))
 
     @Test
     fun random4() = assertEquals(-3.8, parser.calculate("1+3.2-2x4"))

@@ -8,7 +8,7 @@ package com.github.submob.parsermob.model
 enum class Operators(val sign: String, val precedence: Int) {
     PLUS("+", 2),
     MINUS("-", 2),
-    MULTIPLY("*", 3),
+    MULTIPLY("x", 3),
     DIVISION("/", 4),
     UNARY("u", 6)
 }
