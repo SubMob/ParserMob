@@ -54,11 +54,10 @@ class ParserMob {
         return sb.toString()
     }
 
-    @Suppress("MagicNumber")
     private fun roundToPrecision(value: Double, precision: Int = 3): Double {
         val corrector = 10.0.pow(precision).toInt()
         var result = round(value * corrector) / corrector
-        if (result == -0.0) {
+        if (result == NEGATIVE_ZERO) {
             result = 0.0
         }
         return result
@@ -73,21 +72,25 @@ class ParserMob {
                     val num1 = numStack.pop()
                     numStack.push(num1 + num0)
                 }
+
                 Operators.MINUS.sign -> {
                     val num0 = numStack.pop()
                     val num1 = numStack.pop()
                     numStack.push(num1 - num0)
                 }
+
                 Operators.MULTIPLY.sign -> {
                     val num0 = numStack.pop()
                     val num1 = numStack.pop()
                     numStack.push(num1 * num0)
                 }
+
                 Operators.DIVISION.sign -> {
                     val num0 = numStack.pop()
                     val num1 = numStack.pop()
                     numStack.push(num1 / num0)
                 }
+
                 Operators.UNARY.sign -> {
                     val num0 = numStack.pop()
                     numStack.push(-1.0 * num0)
@@ -121,6 +124,7 @@ class ParserMob {
                     numString.append(currChar)
                     i++
                 }
+
                 currChar.toString() isIn Operators.values() || currChar == '(' -> {
                     if (currChar == '(') {
                         // check for implicit multiply
@@ -134,6 +138,7 @@ class ParserMob {
 
                     i++
                 }
+
                 currChar == ')' -> {
                     computeBracket(numString)
                     i++
@@ -234,5 +239,9 @@ class ParserMob {
     private fun clearStacks() {
         numStack.clear()
         opStack.clear()
+    }
+
+    companion object {
+        private const val NEGATIVE_ZERO = -0.0
     }
 }
