@@ -125,10 +125,10 @@ class ParserMob {
                     i++
                 }
 
-                currChar.toString() isIn Operators.values() || currChar == '(' -> {
+                currChar.toString() isIn Operators.entries.toTypedArray() || currChar == '(' -> {
                     if (currChar == '(') {
                         // check for implicit multiply
-                        if (i != 0 && expression[i - 1].toString() notIn Operators.values()) {
+                        if (i != 0 && expression[i - 1].toString() notIn Operators.entries.toTypedArray()) {
                             performSafePushToStack(numString, "x")
                         }
                         opStack.push("(")
@@ -145,7 +145,7 @@ class ParserMob {
                 }
 
                 else -> {
-                    if (i != 0 && expression[i - 1].toString() notIn Operators.values() &&
+                    if (i != 0 && expression[i - 1].toString() notIn Operators.entries.toTypedArray() &&
                         expression[i - 1] != '('
                     ) {
                         performSafePushToStack(numString, "x")
@@ -210,7 +210,7 @@ class ParserMob {
 
     private fun getBinaryOperatorPrecedence(
         currOp: String
-    ) = Operators.values()
+    ) = Operators.entries
         .firstOrNull { it.sign == currOp }
         ?.precedence ?: -1
 
