@@ -16,9 +16,6 @@ kotlin {
     iosSimulatorArm64()
 
     sourceSets.commonTest.dependencies {
-        libs.common.apply {
-            implementation(test)
-            implementation(testAnnotations)
-        }
+        implementation(libs.common.test)
     }
 }
