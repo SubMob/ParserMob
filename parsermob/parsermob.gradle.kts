@@ -4,8 +4,7 @@
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
-    `maven-publish`
-    signing
+    alias(libs.plugins.mavenPublish)
 }
 
 kotlin {
@@ -18,4 +17,10 @@ kotlin {
     sourceSets.commonTest.dependencies {
         implementation(libs.common.test)
     }
+}
+
+mavenPublishing {
+    // Coordinates (GROUP + POM_ARTIFACT_ID), POM, host and auto-release come from gradle.properties.
+    // Central Portal requires signed artifacts; keys are provided in CI via ORG_GRADLE_PROJECT_* env.
+    signAllPublications()
 }
